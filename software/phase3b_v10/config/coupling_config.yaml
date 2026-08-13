@@ -1,0 +1,33 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase3B-v1.0
+
+inputs:
+  phase3a_v10_root: "../Phase3A_Teleconnection_Analysis_v1.0"
+  phase3a_stage2_v11_root: "../Phase3A_Stage2_v1.1_EventAware_SeasonalRobustness"
+
+analysis:
+  lag_min_months: 0
+  lag_max_months: 12
+  fdr_alpha: 0.05
+  min_abs_r_canonical: 0.20
+
+transport_predictors:
+  - transport_makassar_sv
+  - transport_lombok_sv
+  - transport_ombai_sv
+  - transport_timor_sv
+  - transport_total_outflow_sv
+
+banda_responses:
+  - ohc300_banda_anom
+  - ohc700_banda_anom
+  - sst_banda_anom
+  - mld_banda_anom
+  - tau_banda_anom
+  - curl_tau_banda_anom
+  - wek_banda_anom
+
+conventions:
+  positive_lag: "positive lag means ITF transport leads Banda Sea response"
+  transport_sign: "positive toward Indian Ocean"

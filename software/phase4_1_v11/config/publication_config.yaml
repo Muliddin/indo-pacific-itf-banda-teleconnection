@@ -1,0 +1,16 @@
+project:
+  version: "Phase4.1-v1.1"
+  manuscript_title: "Teleconnection of ENSO and IOD to the Indonesian Throughflow and Its Consequences for Ocean Heat Content and Upwelling in the Banda Sea"
+
+inputs:
+  phase4_root: "../Phase4_Synthesis_Manuscript_v1.0"
+  phase4_1_root: "../Phase4.1_Manuscript_Audit_Submission_v1.0"
+
+figures:
+  dpi: 300
+  width_inches: 11
+  height_inches: 7
+
+submission:
+  max_main_figures: 5
+  max_main_tables: 3

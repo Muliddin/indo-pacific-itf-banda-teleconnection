@@ -1,0 +1,31 @@
+Phase: Phase 2C - Data Preprocessing & Harmonization
+Version: v1.0 FINAL
+Period: 1993-01 to 2025-12
+Temporal resolution: Monthly
+Expected months: 396
+QC checks: 7
+QC failures: 0
+Missing harmonized cells: 0
+Duplicate timestamps: 0
+Climatology baseline: 1993-2020
+Status: PASS
+
+Primary analysis-ready dataset:
+data/processed/timeseries/harmonized_monthly_1993_2025.csv
+
+Scientific validation:
+- OHC300: PASS
+- OHC700: PASS
+- OHC700 >= OHC300: PASS
+- SST: PASS
+- MLD: PASS
+- Wind stress: PASS
+- Wind-stress curl: PASS
+- Monthly anomaly construction: PASS
+- Niño3.4/DMI temporal alignment: PASS
+- DUACS monthly harmonization: PASS
+
+Methodological note:
+ekman_pumping_proxy is curl(tau)/(rho0*f).
+Full Ekman pumping should be calculated in the subsequent
+scientific-analysis workflow before publication-level interpretation.

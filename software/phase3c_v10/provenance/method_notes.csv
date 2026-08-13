@@ -1,0 +1,9 @@
+item,note
+primary mediators,total major ITF outflow and full Ekman pumping
+mutual climate adjustment,Niño3.4 models control DMI; DMI models control Niño3.4
+Qout->OHC lag,1 month for OHC300 and OHC700
+Ekman->OHC lag,"0 months, contemporaneous coupling"
+primary bootstrap,"12-month moving blocks, 5000 replicates"
+seasonal bootstrap,cluster resampling by outcome year
+section sensitivity,"Makassar, Ombai, Timor replace Qout one at a time"
+causal language,"mediation evidence is associative under an explicit DAG, not proof of causation"

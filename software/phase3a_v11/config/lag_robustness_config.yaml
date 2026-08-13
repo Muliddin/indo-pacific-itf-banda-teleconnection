@@ -1,0 +1,25 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase3A-v1.1-LagRobustness
+
+inputs:
+  phase3a_v10_root: "../Phase3A_Teleconnection_Analysis_v1.0"
+
+analysis:
+  lag_min_causal: 0
+  lag_max_causal: 12
+  fdr_alpha: 0.05
+  min_abs_r_for_freeze: 0.15
+  min_preprocessing_sign_agreement_fraction: 0.75
+  max_best_lag_spread_months: 4
+
+indices:
+  - nino34
+  - dmi
+
+transport_targets:
+  - transport_makassar_sv
+  - transport_lombok_sv
+  - transport_ombai_sv
+  - transport_timor_sv
+  - transport_total_outflow_sv

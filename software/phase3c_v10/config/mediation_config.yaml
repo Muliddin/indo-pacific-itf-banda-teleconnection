@@ -1,0 +1,83 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase3C-v1.0
+
+inputs:
+  phase3a_v10_root: "../Phase3A_Teleconnection_Analysis_v1.0"
+  phase3b_v11_root: "../Phase3B_v1.1_Mechanistic_Directionality_FullEkman"
+
+analysis:
+  start: "1993-01-01"
+  end: "2025-12-01"
+  bootstrap_iterations: 5000
+  block_length_months: 12
+  random_seed: 42
+  fdr_alpha: 0.05
+  min_abs_indirect_effect: 0.01
+  min_sign_stability_fraction: 0.80
+
+drivers:
+  nino34:
+    covariate: dmi
+    mediator_lags:
+      qout: 0
+      ekman: 0
+  dmi:
+    covariate: nino34
+    mediator_lags:
+      qout: 0
+      ekman: 0
+
+mediators:
+  qout: "transport_total_outflow_sv_anom_dt"
+  ekman: "full_ekman_pumping_banda_anom_dt"
+
+primary_outcomes:
+  ohc300:
+    variable: "ohc300_banda_anom_dt"
+    mediator_to_outcome_lags:
+      qout: 1
+      ekman: 0
+  ohc700:
+    variable: "ohc700_banda_anom_dt"
+    mediator_to_outcome_lags:
+      qout: 1
+      ekman: 0
+
+secondary_outcomes:
+  sst:
+    variable: "sst_banda_anom_dt"
+    mediator_to_outcome_lags:
+      qout: 0
+      ekman: 0
+  mld:
+    variable: "mld_banda_anom_dt"
+    mediator_to_outcome_lags:
+      qout: 4
+      ekman: 0
+
+section_sensitivity:
+  makassar: "transport_makassar_sv_anom_dt"
+  ombai: "transport_ombai_sv_anom_dt"
+  timor: "transport_timor_sv_anom_dt"
+
+section_to_outcome_lags:
+  ohc300:
+    makassar: 0
+    ombai: 1
+    timor: 2
+  ohc700:
+    makassar: 0
+    ombai: 1
+    timor: 1
+
+seasonal_sensitivity:
+  - SON
+  - JJA
+
+conventions:
+  indirect_qout: "a_qout * b_qout"
+  indirect_ekman: "a_ekman * b_ekman"
+  total_indirect: "indirect_qout + indirect_ekman"
+  total_effect: "c_total"
+  direct_effect: "c_prime"

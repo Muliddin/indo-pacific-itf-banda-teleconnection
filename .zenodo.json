@@ -1,0 +1,22 @@
+{
+  "creators": [
+    {
+      "name": "[AUTHOR_NAME]"
+    }
+  ],
+  "keywords": [
+    "Indonesian Throughflow",
+    "Banda Sea",
+    "ENSO",
+    "Indian Ocean Dipole",
+    "ocean heat content",
+    "Ekman pumping",
+    "teleconnection"
+  ],
+  "access_right": "open",
+  "title": "Reproducible analysis software for ENSO/IOD\u2013Indonesian Throughflow\u2013Banda Sea teleconnection analysis",
+  "upload_type": "software",
+  "version": "1.0",
+  "license": "MIT",
+  "description": "Frozen analysis and figure-generation workflows supporting the JGR: Oceans submission."
+}

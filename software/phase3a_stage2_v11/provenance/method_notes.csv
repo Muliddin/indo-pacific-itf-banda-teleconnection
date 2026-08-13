@@ -1,0 +1,7 @@
+item,note
+seasonal unit,season-year means; December assigned to following DJF season-year
+event unit,independent persistent episode
+bootstrap,resample event means with replacement
+permutation,shuffle event means between contrast groups
+sample-size flags,>=5 adequate; 3-4 limited; <3 insufficient
+mediation,deferred until Stage 2 v1.1 freeze review

@@ -1,0 +1,5 @@
+item,note
+lag convention,positive lag means index leads response; freeze decisions use only 0..+12
+partial significance,partial-correlation p uses AR1 effective N and one-control-variable df approximation
+multiple testing,BH-FDR reported within each index-target family and globally where applicable
+freeze rule,"designed a priori in this patch; partial significance is diagnostic, not automatic veto"

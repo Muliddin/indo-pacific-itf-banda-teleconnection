@@ -1,0 +1,40 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase2C-v1.0
+  phase2b_root: "../Phase2B_Data_Acquisition_Pipeline_v1.2_final_macOS"
+
+analysis:
+  start: "1993-01-01"
+  end: "2025-12-01"
+  frequency: "MS"
+  expected_months: 396
+  climatology_start: "1993-01-01"
+  climatology_end: "2020-12-01"
+
+region:
+  west: 124.0
+  east: 132.0
+  south: -8.0
+  north: -2.0
+
+ohc:
+  rho0_kg_m3: 1025.0
+  cp_j_kg_k: 3990.0
+  reference_temperature_c: 0.0
+  primary_max_depth_m: 300.0
+  sensitivity_max_depth_m: 700.0
+
+upwelling:
+  rho0_kg_m3: 1025.0
+  earth_omega_s_1: 7.2921159e-5
+  earth_radius_m: 6371000.0
+  minimum_abs_coriolis_s_1: 1.0e-5
+
+outputs:
+  glorys_monthly: "data/interim/glorys/glorys_banda_monthly_1993_2025.nc"
+  era5_monthly: "data/interim/era5/era5_banda_monthly_1993_2025.nc"
+  duacs_monthly: "data/interim/duacs/duacs_banda_monthly_1993_2025.nc"
+  climate_indices_csv: "data/processed/timeseries/climate_indices_1993_2025.csv"
+  regional_indices_csv: "data/processed/timeseries/banda_regional_indices_1993_2025.csv"
+  derived_gridded: "data/processed/gridded/banda_derived_monthly_1993_2025.nc"
+  harmonized_timeseries: "data/processed/timeseries/harmonized_monthly_1993_2025.csv"

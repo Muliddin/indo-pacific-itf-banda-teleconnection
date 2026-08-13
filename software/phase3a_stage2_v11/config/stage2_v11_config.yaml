@@ -1,0 +1,43 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase3A-Stage2-v1.1
+
+inputs:
+  phase3a_v10_root: "../Phase3A_Teleconnection_Analysis_v1.0"
+  stage2_v10_root: "../Phase3A_Stage2_Seasonal_Composites_v1.0"
+
+analysis:
+  fdr_alpha: 0.05
+  bootstrap_iterations: 5000
+  permutation_iterations: 5000
+  random_seed: 42
+  min_events_freeze: 5
+  min_events_conditional: 3
+  min_abs_r_freeze: 0.30
+
+event_thresholds:
+  nino34_warm: 0.5
+  nino34_cold: -0.5
+  dmi_positive: 0.4
+  dmi_negative: -0.4
+  persistence_months: 3
+
+transport_targets:
+  - transport_makassar_sv_anom_dt
+  - transport_lombok_sv_anom_dt
+  - transport_ombai_sv_anom_dt
+  - transport_timor_sv_anom_dt
+  - transport_total_outflow_sv_anom_dt
+
+stage1_frozen_lags:
+  nino34:
+    transport_makassar_sv_anom_dt: 2
+    transport_lombok_sv_anom_dt: 10
+    transport_ombai_sv_anom_dt: 0
+    transport_timor_sv_anom_dt: 0
+    transport_total_outflow_sv_anom_dt: 0
+  dmi:
+    transport_lombok_sv_anom_dt: 0
+    transport_ombai_sv_anom_dt: 0
+    transport_timor_sv_anom_dt: 0
+    transport_total_outflow_sv_anom_dt: 0

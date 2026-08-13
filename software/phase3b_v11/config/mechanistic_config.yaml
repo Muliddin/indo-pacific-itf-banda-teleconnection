@@ -1,0 +1,39 @@
+inputs:
+  phase2c_root: "../Phase2C_Preprocessing_Harmonization_v1.0_macOS"
+  phase3a_v10_root: "../Phase3A_Teleconnection_Analysis_v1.0"
+  phase3b_v10_root: "../Phase3B_ITF_OHC_Upwelling_Coupling_v1.0"
+
+analysis:
+  start: "1993-01-01"
+  end: "2025-12-01"
+  climatology_start: "1993-01-01"
+  climatology_end: "2020-12-01"
+  lag_max_months: 12
+  fdr_alpha: 0.05
+  rho0_kg_m3: 1025.0
+  omega_rad_s: 7.2921159e-5
+  earth_radius_m: 6371000.0
+  min_abs_r_directionality: 0.20
+
+variables:
+  era5_tau_x: "avg_iews"
+  era5_tau_y: "avg_inss"
+  era5_sst: "sst"
+
+transport:
+  - transport_makassar_sv_anom_dt
+  - transport_lombok_sv_anom_dt
+  - transport_ombai_sv_anom_dt
+  - transport_timor_sv_anom_dt
+  - transport_total_outflow_sv_anom_dt
+
+ocean_responses:
+  - ohc300_banda_anom_dt
+  - ohc700_banda_anom_dt
+  - sst_banda_anom_dt
+  - mld_banda_anom_dt
+
+wind_candidates:
+  - full_ekman_pumping_banda_anom_dt
+  - curl_tau_banda_anom_dt
+  - tau_banda_anom_dt

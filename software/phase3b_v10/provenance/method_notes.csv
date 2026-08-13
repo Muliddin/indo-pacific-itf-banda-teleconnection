@@ -1,0 +1,8 @@
+item,note
+lag convention,positive lag means ITF transport leads Banda Sea response
+primary preprocessing,detrended monthly ITF anomalies vs detrended Banda anomalies
+partial controls,Niño3.4 and DMI simultaneously
+seasonal inference,season-year means
+multiple testing,Benjamini-Hochberg FDR
+upwelling metric,"wek is still the Phase 2C diagnostic proxy, not yet full Ekman pumping"
+mediation,deferred until Phase 3B robustness review

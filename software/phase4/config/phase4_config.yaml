@@ -1,0 +1,14 @@
+project:
+  title: "Teleconnection of ENSO and IOD to the Indonesian Throughflow and Its Consequences for Ocean Heat Content and Upwelling in the Banda Sea"
+  period: "1993-01 to 2025-12"
+inputs:
+  phase2d_v11_root: "../Phase2D_v1.1_NativeGrid_Transport_macOS"
+  phase2d_v12_root: "../Phase2D_v1.2_Timor_TotalOutflow_macOS"
+  phase3a_v11_root: "../Phase3A_v1.1_LagRobustness"
+  phase3a_stage2_v11_root: "../Phase3A_Stage2_v1.1_EventAware_SeasonalRobustness"
+  phase3b_v10_root: "../Phase3B_ITF_OHC_Upwelling_Coupling_v1.0"
+  phase3b_v11_root: "../Phase3B_v1.1_Mechanistic_Directionality_FullEkman"
+  phase3c_v10_root: "../Phase3C_Parallel_Mediation_PathAnalysis_v1.0"
+  phase3c_v11_root: "../Phase3C_v1.1_SingleMediator_CollinearityDiagnostics"
+figures:
+  dpi: 300

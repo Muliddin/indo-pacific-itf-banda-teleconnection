@@ -1,0 +1,27 @@
+project:
+  version: "Phase4.1-v1.0"
+  target_manuscript_type: "Q1/Q2 international journal research article"
+inputs:
+  phase4_root: "../Phase4_Synthesis_Manuscript_v1.0"
+audit:
+  allowed_primary_tier: "ROBUST_CORE"
+  allowed_supporting_tier: "CONDITIONAL_SUPPORTING"
+  exploratory_tier: "EXPLORATORY_CONTEXTUAL"
+  forbid_causal_mediation_claims: true
+main_figures:
+  - Figure_1_ITF_section_validation.png
+  - Figure_2_climate_ITF_frozen_effects.png
+  - Figure_5_conceptual_DAG.png
+candidate_main_figures:
+  - Figure_3_ITF_Banda_coupling.png
+  - Figure_4_mediation_decomposition.png
+main_tables:
+  - Table_1_total_outflow_validation.csv
+  - Table_2_ENSO_IOD_ITF_lagged.csv
+  - Table_3_seasonal_event_robustness.csv
+  - Table_4_ITF_Banda_coupling.csv
+supplementary_tables:
+  - Table_S1_ITF_section_validation.csv
+  - Table_5_parallel_mediation.csv
+  - Table_S2_commonality.csv
+  - Table_S3_single_parallel.csv

@@ -1,0 +1,7 @@
+item,note
+single mediator,Qout and full Ekman fitted separately with mutual ENSO/IOD adjustment
+bootstrap,"12-month moving-block bootstrap, 5000 replicates"
+VIF,two-mediator VIF from Qout-Ekman correlation
+commonality,unique and shared incremental R2 beyond driver+covariate baseline
+comparison,parallel/single absolute indirect-effect ratio; <0.5 flags strong attenuation when single model is significant
+threshold policy,Phase 3C v1.0 inferential thresholds are not modified

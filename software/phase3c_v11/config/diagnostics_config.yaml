@@ -1,0 +1,38 @@
+project:
+  name: ENSO_IOD_ITF_Banda_Sea
+  version: Phase3C-v1.1
+
+inputs:
+  phase3c_v10_root: "../Phase3C_Parallel_Mediation_PathAnalysis_v1.0"
+
+analysis:
+  bootstrap_iterations: 5000
+  block_length_months: 12
+  random_seed: 42
+  fdr_alpha: 0.05
+  vif_warning: 5.0
+  vif_high: 10.0
+  mediator_corr_warning_abs: 0.70
+  attenuation_flag_ratio: 0.50
+
+drivers:
+  nino34:
+    covariate: dmi
+  dmi:
+    covariate: nino34
+
+mediators:
+  qout: "transport_total_outflow_sv_anom_dt"
+  ekman: "full_ekman_pumping_banda_anom_dt"
+
+outcomes:
+  ohc300:
+    variable: "ohc300_banda_anom_dt"
+    lags:
+      qout: 1
+      ekman: 0
+  ohc700:
+    variable: "ohc700_banda_anom_dt"
+    lags:
+      qout: 1
+      ekman: 0
