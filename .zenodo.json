@@ -1,7 +1,8 @@
 {
   "creators": [
     {
-      "name": "[AUTHOR_NAME]"
+      "name": "Muliddin",
+      "orcid": "0000-0001-5683-0773"
     }
   ],
   "keywords": [
@@ -14,9 +15,9 @@
     "teleconnection"
   ],
   "access_right": "open",
-  "title": "Reproducible analysis software for ENSO/IOD\u2013Indonesian Throughflow\u2013Banda Sea teleconnection analysis",
+  "title": "Reproducible analysis software for ENSO/IOD–Indonesian Throughflow–Banda Sea teleconnection analysis",
   "upload_type": "software",
   "version": "1.0",
   "license": "MIT",
-  "description": "Frozen analysis and figure-generation workflows supporting the JGR: Oceans submission."
+  "description": "Frozen analysis and figure-generation workflows supporting reproducible analysis of ENSO/IOD teleconnections, Indonesian Throughflow variability, and Banda Sea ocean–atmosphere coupling for 1993–2025. The associated analysis-ready dataset is archived at https://doi.org/10.5281/zenodo.21926462."
 }
